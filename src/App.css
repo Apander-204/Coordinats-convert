@@ -1,0 +1,90 @@
+/* Общий стиль для контейнера */
+div {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+  justify-content: space-between; /* Располагаем элементы с промежутками */
+  align-items: center; /* Выравниваем по вертикали */
+  gap: 20px; /* Промежутки между элементами */
+  margin: 20px;
+}
+
+/* Для первого блока с заголовком и инпутами */
+div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Промежутки между элементами в колонке */
+}
+
+/* Для кнопки */
+.button {
+  padding: 14px 30px;
+  font-size: 18px;
+  font-family: 'Minecraft', sans-serif;
+  background-color: #6b4f1f; /* Темный цвет, как земля */
+  color: #fff;
+  border: 3px solid #4e3b1f; /* Тонкая темная граница */
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), 0 3px 5px rgba(0, 0, 0, 0.3); /* Эффект вдавленного блока */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.button:hover {
+  background-color: #4e3b1f; /* Цвет кнопки становится немного светлее при наведении */
+  transform: translateY(-2px); /* Поднятие кнопки */
+}
+
+.button:active {
+  background-color: #3c2a14; /* Темный оттенок при нажатии */
+  transform: translateY(0); /* Возвращение в исходное положение */
+}
+
+/* Стиль для инпутов */
+.input-field {
+  padding: 12px 18px;
+  font-size: 18px;
+  font-family: 'Minecraft', sans-serif; /* Шрифт, похожий на Minecraft */
+  border: 3px solid #5a4d3d; /* Темный коричневый, как земля в Minecraft */
+  background-color: #a88f5f; /* Цвет фона, как древесина */
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста */
+}
+
+.input-field:focus {
+  border-color: #7a5c3f; /* Более темный коричневый при фокусе */
+  background-color: #d0c4a1; /* Светлее фон при фокусе */
+}
+
+/* Стиль для заголовков */
+h3 {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 24px; /* Размер шрифта, чтобы было заметно */
+  font-weight: bold;
+  color: #5a4d3d; /* Цвет текста, как у земли */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Легкая тень для текста */
+  letter-spacing: 1px; /* Немного растягиваем буквы для эффекта */
+  margin: 20px 0; /* Отступ сверху и снизу */
+  padding: 10px; /* Немного внутреннего отступа */
+  background-color: #a88f5f; /* Цвет фона, как древесина */
+  border-radius: 6px; /* Слегка скругленные углы */
+  border: 3px solid #7a5c3f; /* Граница темного цвета, как текстура дерева */
+}
+
+h3:hover {
+  color: #7a5c3f; /* Цвет текста меняется при наведении */
+  background-color: #d0c4a1; /* Светлее фон при наведении */
+  transform: translateY(-3px); /* Легкое поднятие заголовка */
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+h3:active {
+  color: #5a4d3d; /* Возвращается к исходному цвету */
+  background-color: #a88f5f; /* Возвращается к исходному фону */
+  transform: translateY(0); /* Сбрасывается эффект подъема */
+}
